@@ -1,0 +1,172 @@
+framework:
+    translator:
+        paths:
+            - '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/translations'
+cms:
+    public_paths:
+        -
+            source: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/public/theme/dist'
+            target: /theme/templatemo/breezed/theme
+        -
+            source: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/public/tulia-editor-blocks/dist'
+            target: /theme/templatemo/breezed/tulia-editor-blocks
+    templating:
+        paths:
+            -
+                name: theme/templatemo/breezed
+                path: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/views'
+    assetter:
+        assets:
+            templatemo.breezed.main:
+                require:
+                    - font_awesome
+                    - frontend
+                    - templatemo.breezed.styles
+                    - templatemo.breezed.scripts
+                group: head
+                included:
+                    - bootstrap
+                    - jquery
+                    - js_cookie
+            templatemo.breezed.styles:
+                require:
+                    - font_awesome
+                    - frontend
+                styles:
+                    - 'https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap'
+                    - 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap'
+                    - /assets/theme/templatemo/breezed/theme/css/bundle.min.css
+                group: head
+            templatemo.breezed.scripts:
+                scripts:
+                    - /assets/theme/templatemo/breezed/theme/js/bundle.min.js
+                group: body
+            templatemo.breezed.editor.blocks:
+                scripts:
+                    - /assets/theme/templatemo/breezed/tulia-editor-blocks/theme-tulia-editor-blocks.js
+                collection: tulia_editor
+    theme:
+        configuration:
+            Templatemo/Breezed:
+                imports:
+                    collections:
+                        default:
+                            name: Default homepage
+                            filepath: 'Resources/imports/default.json'
+                translation_domain: templatemo-breezed
+                css_framework: bootstrap-5
+                configuration:
+                    base:
+                        assets:
+                            - templatemo.breezed.main
+                        widget_spaces:
+                            -
+                                name: mainmenu
+                                label: 'Main menu'
+                            -
+                                name: homepage
+                                label: Homepage
+                customizer:
+                    variables:
+                        :root:
+                            bs-primary: breezed.color.primary
+                            theme-hero-overlay-opacity: hero.static.overlay.opacity
+                        .btn-primary:
+                            bs-btn-bg: breezed.color.primary
+                            bs-btn-border-color: breezed.color.primary
+                            bs-btn-hover-bg: breezed.color.primary
+                            bs-btn-hover-border-color: breezed.color.primary
+                            bs-btn-active-bg: breezed.color.primary
+                    builder:
+                        breezed.colors:
+                            label: colors
+                            controls:
+                                breezed.color.primary:
+                                    type: colorpicker
+                                    label: primaryColor
+                                    value: '#51a34b'
+                                    transport: postMessage
+                        breezed.header:
+                            label: header
+                            controls:
+                                header.logo.text:
+                                    type: text
+                                    label: logoText
+                                    value: .Breezed
+                                    transport: postMessage
+                                header.logo.image:
+                                    type: filepicker
+                                    control_options:
+                                        file_type: image
+                                    label: logoImage
+                                header.show_language_switcher:
+                                    type: yes_no
+                                    label: showLanguageSwitcher
+                                    value: yes
+                        breezed.hero:
+                            label: banner
+                            controls:
+                                hero.static.headline:
+                                    label: headline
+                                    multilingual: true
+                                    transport: postMessage
+                                    value: 'Welcome To Breezed'
+                                hero.static.title:
+                                    label: title
+                                    multilingual: true
+                                    transport: postMessage
+                                    value: 'New Bootstrap Template'
+                                hero.static.btn1.label:
+                                    label: button1Label
+                                    multilingual: true
+                                    transport: postMessage
+                                    value: 'Learn more'
+                                hero.static.btn1.link:
+                                    label: button1Link
+                                    value: '#'
+                                hero.static.btn2.label:
+                                    label: button2Label
+                                    multilingual: true
+                                    transport: postMessage
+                                    value: 'Learn more'
+                                hero.static.btn2.link:
+                                    label: button2Link
+                                    value: '#'
+                                hero.static.background:
+                                    type: filepicker
+                                    control_options:
+                                        file_type: image
+                                    label: backgroundImage
+                                    transport: postMessage
+                                hero.static.overlay.opacity:
+                                    type: range
+                                    control_options:
+                                        mix: 0
+                                        max: 1
+                                        step: 0.1
+                                    label: overlayOpacity
+                                    transport: postMessage
+                                    value: 0.3
+                        breezed.footer:
+                            label: footer
+                            controls:
+                                footer.copyrights:
+                                    label: copyrights
+                                    value: 'Breezed Co., Ltd.'
+                                    transport: postMessage
+                        breezed.footer.socials:
+                            label: socialMediaIcons
+                            parent: breezed.footer
+                            controls:
+                                footer.socials.facebook:
+                                    label: Facebook
+                                    value: '#facebook'
+                                footer.socials.twitter:
+                                    label: Twitter
+                                    value: '#twitter'
+                                footer.socials.youtube:
+                                    label: YouTube
+                                    value: '#youtube'
+                                footer.socials.linkedin:
+                                    label: LinkedIn
+                                    value: '#linkedin'

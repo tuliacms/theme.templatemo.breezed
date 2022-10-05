@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="templatemo-breezed+intl-icu.en.xlf">
+        <body>
+            <trans-unit id="templatemo.breezed-theme.2">
+                <source>header</source>
+                <target>Nagłówek</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.3">
+                <source>footer</source>
+                <target>Stopka</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.4">
+                <source>logoText</source>
+                <target>Tekst logotypu</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.5">
+                <source>showLanguageSwitcher</source>
+                <target>Pokaż przełącznik języków</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.6">
+                <source>copyrights</source>
+                <target>Copyrights</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.7">
+                <source>socialMediaIcons</source>
+                <target>Ikonki Social Media</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.8">
+                <source>banner</source>
+                <target>Baner</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.9">
+                <source>headline</source>
+                <target>Nagłówek</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.10">
+                <source>title</source>
+                <target>Tytuł</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.11">
+                <source>button1Label</source>
+                <target>Przycisk 1 - Etykieta</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.12">
+                <source>button1Link</source>
+                <target>Przycisk 1 - Link</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.13">
+                <source>button2Label</source>
+                <target>Przycisk 2 - Etykieta</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.14">
+                <source>button2Link</source>
+                <target>Przycisk 2 - Link</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.15">
+                <source>backgroundImage</source>
+                <target>Zdjęcie tła</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.16">
+                <source>colors</source>
+                <target>Kolorystyka</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.17">
+                <source>primaryColor</source>
+                <target>Kolor podstawowy</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.18">
+                <source>overlayOpacity</source>
+                <target>Przezroczystość nakładki</target>
+            </trans-unit>
+            <trans-unit id="templatemo.breezed-theme.19">
+                <source>logoImage</source>
+                <target>Grafika logotypu</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
