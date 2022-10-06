@@ -1,7 +1,9 @@
-let gulp = require('gulp');
+const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-let sourcemaps = require('gulp-sourcemaps');
-let concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 
 gulp.task('sass', () => {
     return gulp.src([
@@ -16,6 +18,7 @@ gulp.task('sass', () => {
     .pipe(sass())
     .pipe(concat('bundle.min.css'))
     .pipe(sourcemaps.write('.'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist/css'));
 });
 
@@ -38,20 +41,11 @@ gulp.task('js-global', function () {
             'src/js/custom.js',
         ])
         .pipe(sourcemaps.init())
+        .pipe(uglify())
         .pipe(concat('bundle.min.js'))
         .pipe(sourcemaps.write('.'))
-        //.pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
-
-/*gulp.task('js-customizer', function () {
-    return gulp
-        .src([
-            //'src/js/customizer.js',
-            'src/js/editor-plugins.js'
-        ])
-        .pipe(gulp.dest('dist/js/'));
-});*/
 
 gulp.task('images', function () {
     return gulp
@@ -65,7 +59,7 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('dist/fonts/'));
 });
 
-gulp.task('js', gulp.series(['js-global'/*, 'js-customizer'*/]));
+gulp.task('js', gulp.series(['js-global']));
 
 gulp.task('publish', () => {
     return gulp.src(['dist/**/*'])
