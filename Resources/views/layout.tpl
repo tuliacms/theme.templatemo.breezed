@@ -3,13 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>{% block title %}{{ title() }}{% endblock %}</title>
         {{ do_action('theme.head') }}
         {% block head %}{% endblock %}
     </head>
     <body class="{{ body_class(app.request) }}">
-        {% block beforebody %}{% endblock %}
-
         <div id="preloader">
             <div class="jumper">
                 <div></div>
@@ -18,8 +15,8 @@
             </div>
         </div>
 
-        {% include relative(_self, '_parts/header.tpl') %}
-        {% include relative(_self, '_parts/hero.tpl') %}
+        {% include template('_parts/header.tpl') %}
+        {% include template('_parts/hero.tpl') %}
         <div id="scroll-down"></div>
 
         {#<section class="section" id="projects">
@@ -220,8 +217,7 @@
         </section>#}
 
         {% block content %}{% endblock %}
-        {% include relative(_self, '_parts/footer.tpl') %}
+        {% include template('_parts/footer.tpl') %}
         {{ do_action('theme.body') }}
-        {% block afterbody %}{% endblock %}
     </body>
 </html>

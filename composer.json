@@ -1,0 +1,14 @@
+{
+    "type": "library",
+    "name": "tuliacms/theme.templatemo.breezed",
+    "license": "MIT",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Tulia\\Theme\\Templatemo\\Breezed\\": "/"
+        }
+    },
+    "require": {
+        "tuliacms/cms": "*"
+    }
+}

@@ -1,20 +1,15 @@
 framework:
     translator:
         paths:
-            - '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/translations'
+            - '%tuliacms/theme.templatemo.breezed%/Resources/translations'
 cms:
     public_paths:
         -
-            source: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/public/theme/dist'
+            source: '%tuliacms/theme.templatemo.breezed%/Resources/public/theme/dist'
             target: /theme/templatemo/breezed/theme
         -
-            source: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/public/tulia-editor-blocks/dist'
+            source: '%tuliacms/theme.templatemo.breezed%/Resources/public/tulia-editor-blocks/dist'
             target: /theme/templatemo/breezed/tulia-editor-blocks
-    templating:
-        paths:
-            -
-                name: theme/templatemo/breezed
-                path: '%kernel.project_dir%/extension/theme/Templatemo/Breezed/Resources/views'
     assetter:
         assets:
             templatemo.breezed.main:
@@ -170,3 +165,7 @@ cms:
                                 footer.socials.linkedin:
                                     label: LinkedIn
                                     value: '#linkedin'
+twig:
+    paths:
+        # We add this for cache warmup
+        '%tuliacms/theme.templatemo.breezed%/Resources/views': ~

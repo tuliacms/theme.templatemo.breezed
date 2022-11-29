@@ -8,7 +8,7 @@ const props = defineProps(['block']);
 const block = inject('blocks.instance').manager(props);
 const translator = inject('translator');
 
-const Range = block.control('Range');
+const Range = block.control('Input.Range');
 
 block.on('created', () => {
     block.expectsFullWidthSection();

@@ -19,7 +19,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 {% for locale in current_website().locales %}
-                                    <li><a href="{{ path('homepage', { _locale: locale.code }) }}" class="dropdown-item">{{ locale.code|trans_locale }}</a></li>
+                                    <li><a href="{{ path('frontend.homepage', { _locale: locale.code }) }}" class="dropdown-item">{{ locale.code|trans_locale }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
