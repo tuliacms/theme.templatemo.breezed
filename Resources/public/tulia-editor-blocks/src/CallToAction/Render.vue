@@ -31,5 +31,5 @@ const props = defineProps(['block']);
 const block = inject('blocks.instance').render(props);
 
 const BackgroundImage = block.extension('BackgroundImage');
-const image = new BackgroundImage(block, () => block.data.backgroundImage, 'background');
+const image = new BackgroundImage(block, () => block.data.backgroundImage);
 </script>
